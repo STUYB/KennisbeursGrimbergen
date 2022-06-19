@@ -1,0 +1,39 @@
+﻿@using KennisbeursGrimbergen.Models.Activity;
+@using KennisbeursGrimbergen.Identity;
+@using KennisbeursGrimbergen.Identity.Entities;
+@using Microsoft.AspNetCore.Identity;
+@using Microsoft.AspNetCore.Mvc.Localization;
+@using System.Linq;
+
+@model CreateActivityModel
+
+@inject IViewLocalizer Localizer;
+
+<form asp-controller="Activities" asp-action="Create">
+    <div style="display: flex; flex-direction: column">
+        <label><span style="color: red;">*</span>@Localizer["Title"]:</label>
+        <input type="text" asp-for="Title" />
+        <span asp-validation-for="Title" style="color: red"></span>
+        <label><span style="color: red;">*</span>@Localizer["Description"]:</label>
+        <input type="text" asp-for="Description" />
+        <span asp-validation-for="Description" style="color: red"></span>
+        <label><span style="color: red;">*</span>@Localizer["Animator"]:</label>
+        <input type="text" asp-for="Animator" />
+        <span asp-validation-for="Animator" style="color: red"></span>
+        <label><span style="color: red;">*</span>@Localizer["Email"]:</label>
+        <input type="text" asp-for="Email" />
+        <span asp-validation-for="Email" style="color: red"></span>
+        <label><span style="color: red;">*</span>@Localizer["Date"]:</label>
+        <input type="text" asp-for="Date" />
+        <span asp-validation-for="Date" style="color: red"></span>
+        <label><span style="color: red;">*</span>@Localizer["Location"]:</label>
+        <input type="text" asp-for="Location" />
+        <span asp-validation-for="Location" style="color: red"></span>
+    </div>
+    <br />
+    <div style="display: flex;justify-content: flex-end;">
+        <input type="submit" value="@Localizer["Create"]" class="btn btn-info" />
+    </div>
+</form>
+
+<br />

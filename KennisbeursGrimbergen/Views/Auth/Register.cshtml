@@ -1,0 +1,27 @@
+﻿@using KennisbeursGrimbergen.Identity.Models;
+@using Microsoft.AspNetCore.Mvc.Localization;
+
+@inject IViewLocalizer Localizer;
+
+@model SignUpModel;
+
+<span style="color: red;">@ViewData["registrationError"]</span>
+<span style="color: green;">@ViewData["registrationSuccess"]</span>
+
+<form asp-action="Register">
+    <div style="display: flex; flex-direction: column">
+        <label><span style="color: red;">*</span>@Localizer["Username"]:</label>
+        <input asp-for="UserName" />
+        <span style="color: red;" asp-validation-for="UserName"></span>
+        <label><span style="color: red;">*</span>@Localizer["Email"]:</label>
+        <input type="email" asp-for="Email" />
+        <span style="color: red;" asp-validation-for="Email"></span>
+        <label><span style="color: red;">*</span>@Localizer["Password"]:</label>
+        <input type="text" asp-for="Password" />
+        <span style="color: red;" asp-validation-for="Password"></span>
+    </div>
+    <br />
+    <div style="display: flex;justify-content: flex-end;">
+        <input type="submit" value="@Localizer["Register"]" class="btn btn-info" />
+    </div>
+</form>

@@ -1,0 +1,88 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = KennisbeursGrimbergen
+build_property.RootNamespace = KennisbeursGrimbergen
+build_property.ProjectDir = C:\Data\STUDY\PROG\P2\Dot NET\workspace\KennisbeursGrimbergen\KennisbeursGrimbergen\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Data\STUDY\PROG\P2\Dot NET\workspace\KennisbeursGrimbergen\KennisbeursGrimbergen
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Data/STUDY/PROG/P2/Dot NET/workspace/KennisbeursGrimbergen/KennisbeursGrimbergen/Views/Activities/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWN0aXZpdGllc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Data/STUDY/PROG/P2/Dot NET/workspace/KennisbeursGrimbergen/KennisbeursGrimbergen/Views/Activities/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWN0aXZpdGllc1xEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Data/STUDY/PROG/P2/Dot NET/workspace/KennisbeursGrimbergen/KennisbeursGrimbergen/Views/Activities/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWN0aXZpdGllc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Data/STUDY/PROG/P2/Dot NET/workspace/KennisbeursGrimbergen/KennisbeursGrimbergen/Views/Auth/Forbidden.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxGb3JiaWRkZW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Data/STUDY/PROG/P2/Dot NET/workspace/KennisbeursGrimbergen/KennisbeursGrimbergen/Views/Auth/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Data/STUDY/PROG/P2/Dot NET/workspace/KennisbeursGrimbergen/KennisbeursGrimbergen/Views/Auth/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Data/STUDY/PROG/P2/Dot NET/workspace/KennisbeursGrimbergen/KennisbeursGrimbergen/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Data/STUDY/PROG/P2/Dot NET/workspace/KennisbeursGrimbergen/KennisbeursGrimbergen/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Data/STUDY/PROG/P2/Dot NET/workspace/KennisbeursGrimbergen/KennisbeursGrimbergen/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Data/STUDY/PROG/P2/Dot NET/workspace/KennisbeursGrimbergen/KennisbeursGrimbergen/Views/Static/Links.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGljXExpbmtzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Data/STUDY/PROG/P2/Dot NET/workspace/KennisbeursGrimbergen/KennisbeursGrimbergen/Views/Static/Management.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGljXE1hbmFnZW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Data/STUDY/PROG/P2/Dot NET/workspace/KennisbeursGrimbergen/KennisbeursGrimbergen/Views/Static/Objectives.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGljXE9iamVjdGl2ZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Data/STUDY/PROG/P2/Dot NET/workspace/KennisbeursGrimbergen/KennisbeursGrimbergen/Views/Users/Approve.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcQXBwcm92ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Data/STUDY/PROG/P2/Dot NET/workspace/KennisbeursGrimbergen/KennisbeursGrimbergen/Views/Users/Manage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcTWFuYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Data/STUDY/PROG/P2/Dot NET/workspace/KennisbeursGrimbergen/KennisbeursGrimbergen/Views/Users/Permissions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcUGVybWlzc2lvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Data/STUDY/PROG/P2/Dot NET/workspace/KennisbeursGrimbergen/KennisbeursGrimbergen/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Data/STUDY/PROG/P2/Dot NET/workspace/KennisbeursGrimbergen/KennisbeursGrimbergen/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Data/STUDY/PROG/P2/Dot NET/workspace/KennisbeursGrimbergen/KennisbeursGrimbergen/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-eze923ariz

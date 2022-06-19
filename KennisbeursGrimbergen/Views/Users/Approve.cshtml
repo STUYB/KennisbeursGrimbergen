@@ -1,0 +1,31 @@
+﻿@using KennisbeursGrimbergen.Identity.Models;
+@using KennisbeursGrimbergen.Models.User
+@using Microsoft.AspNetCore.Mvc.Localization;
+
+@inject IViewLocalizer Localizer;
+
+@model ApproveUserModel;
+
+<form>
+    <div style="display: flex; flex-direction: column">
+        <label>@Localizer["Username"]:</label>
+        <input value="@Model.UserName" readonly />
+        <label>@Localizer["Email"]:</label>
+        <input type="email" value="@Model.Email" readonly />
+    </div>
+</form>
+<br />
+<div style="display: flex; flex-direction: row; justify-content: flex-end;">
+    <form asp-action="Approve" asp-route-id="@Model.UserId" style="display: flex; flex-direction: column">
+        <div style="display: flex;justify-content: flex-end;">
+            <input type="submit" value="@Localizer["Approve"]" class="btn btn-success" />
+        </div>
+    </form>
+    &nbsp;
+    &nbsp;
+    <form asp-action="Reject" asp-route-id="@Model.UserId" style="display: flex; flex-direction: column">
+        <div style="display: flex;justify-content: flex-end;">
+            <input type="submit" value="@Localizer["Reject"]" class="btn btn-danger" />
+        </div>
+    </form>
+</div>

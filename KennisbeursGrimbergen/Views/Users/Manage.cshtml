@@ -1,0 +1,94 @@
+﻿@using KennisbeursGrimbergen.Identity;
+@using KennisbeursGrimbergen.Identity.Entities;
+@using Microsoft.AspNetCore.Identity;
+@using Microsoft.AspNetCore.Mvc.Localization;
+@using System.Linq;
+
+@inject IViewLocalizer Localizer;
+@inject UserManager<User> UserManager;
+
+@model IEnumerable<User>
+
+@{
+    int index = 0;
+    var user = await UserManager.GetUserAsync(User);
+    var claims = await UserManager.GetClaimsAsync(user);
+}
+
+<div class="text-center">
+    <h3 class="display-4">@Localizer["Manager Dashboard"]</h3>
+    <p>@Localizer["Approve new users and/or set permissions."]</p>
+</div>
+
+<span style="color: red;">@TempData["manageError"]</span>
+<span style="color: green;">@TempData["manageSuccess"]</span>
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">@Localizer["Username"]</th>
+            <th scope="col">@Localizer["Email"]</th>
+            <th scope="col">@Localizer["Permissions"]</th>
+            <th scope="col">@Localizer["Approved"]</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var u in Model)
+        {
+            <tr>
+                <th scope="row">@index</th>
+                <td>@u.UserName</td>
+                <td>@u.Email</td>
+                <td>
+                    @{
+                        var userRoles = await UserManager.GetRolesAsync(u);
+                        var roles = userRoles.ToArray();
+                        var adminChecked = false;
+                        var managerChecked = false;
+                        var userChecked = false;
+                        var readOnlyUserChecked = false;
+                        foreach (string role in roles)
+                        {
+                            switch (role)
+                            {
+                                case KGIdentity.USER_READ_ONLY:
+                                    readOnlyUserChecked = true;
+                                    break;
+                                case KGIdentity.USER:
+                                    userChecked = true;
+                                    break;
+                                case KGIdentity.MANAGER:
+                                    managerChecked = true;
+                                    break;
+                                case KGIdentity.ADMIN:
+                                    adminChecked = true;
+                                    break;
+                            }
+                        }
+                    }
+                    <form method="GET" asp-controller="Users" asp-action="Permissions" asp-route-id="@u.Id">
+                        <input type="submit" value="@Localizer["Update"]" class="btn btn-info" />
+                    </form>
+                </td>
+                <td>
+                    @if (!@u.Approved)
+                    {
+                        <form method="GET" asp-controller="Users" asp-action="Approve" asp-route-id="@u.Id">
+                            <input type="submit" value="@Localizer["Approve"]" class="btn btn-warning" />
+                        </form>
+                    }
+                    else
+                    {
+                        <i class="fa-solid fa-check" style="color: limegreen"></i>
+                    }
+                </td>
+            </tr>
+            index++;
+        }
+    </tbody>
+</table>
+<br />
+<br />
+<br />
+

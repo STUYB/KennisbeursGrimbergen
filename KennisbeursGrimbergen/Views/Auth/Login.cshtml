@@ -1,0 +1,24 @@
+﻿@using KennisbeursGrimbergen.Identity.Models;
+@using Microsoft.AspNetCore.Mvc.Localization;
+
+@inject IViewLocalizer Localizer;
+
+@model SignInModel;
+
+<span style="color: red;">@ViewData["loginError"]</span>
+
+<form asp-action="Login">
+    <div style="display: flex; flex-direction: column">
+        <label>@Localizer["Username"]:</label>
+        <input type="hidden" asp-for="RedirectUrl" />
+        <input asp-for="UserName" />
+        <span asp-validation-for="UserName"></span>
+        <label>@Localizer["Password"]:</label>
+        <input type="password" asp-for="Password" />
+        <span asp-validation-for="Password"></span>
+    </div>
+    <br />
+    <div style="display: flex;justify-content: flex-end;">
+        <input type="submit" value="@Localizer["Sign in"]" class="btn btn-info" />
+    </div>
+</form>

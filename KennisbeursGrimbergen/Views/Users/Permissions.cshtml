@@ -1,0 +1,43 @@
+﻿@using KennisbeursGrimbergen.Identity;
+@using KennisbeursGrimbergen.Identity.Entities;
+@using Microsoft.AspNetCore.Identity;
+@using KennisbeursGrimbergen.Models.User
+@using Microsoft.AspNetCore.Mvc.Localization;
+
+@inject IViewLocalizer Localizer;
+@inject UserManager<User> UserManager;
+
+@model PermissionsUserModel;
+
+<div class="text-center">
+    <h4 class="display-4">@Model.UserName - @Localizer["Permissions"]</h4>
+</div>
+
+<form asp-controller="Users" asp-action="SetPermission" asp-route-id="@Model.UserId">
+    <div class="list-group">
+        <label class="list-group-item">
+            <input asp-for="HasUserReadOnlyRole" type="checkbox"
+                   class="form-check-input me-1" checked="@Model.HasUserReadOnlyRole">
+            @Localizer["User (Read Only)"]
+        </label>
+        <label class="list-group-item">
+            <input asp-for="HasUserRole" type="checkbox"
+                   class="form-check-input me-1" checked="@Model.HasUserRole">
+            @Localizer["User"]
+        </label>
+        <label class="list-group-item">
+            <input asp-for="HasManagerRole" type="checkbox"
+                   class="form-check-input me-1" checked="@Model.HasManagerRole">
+            @Localizer["Manager"]
+        </label>
+        <label class="list-group-item">
+            <input asp-for="HasAdminRole" type="checkbox"
+                   class="form-check-input me-1" checked="@Model.HasAdminRole">
+            @Localizer["Admin"]
+        </label>
+    </div>
+    <br />
+    <div style="display: flex;justify-content: flex-end;">
+        <input type="submit" value="@Localizer["Update"]" class="btn btn-info" />
+    </div>
+</form>

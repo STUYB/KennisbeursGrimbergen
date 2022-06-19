@@ -1,0 +1,67 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization;
+@using KennisbeursGrimbergen.Entities;
+@using KennisbeursGrimbergen.Identity;
+@using KennisbeursGrimbergen.Identity.Entities;
+@using Microsoft.AspNetCore.Identity;
+@using System.Linq;
+
+@model IEnumerable<Activity>
+
+@inject IViewLocalizer Localizer;
+@inject SignInManager<User> SignInManager;
+@inject UserManager<User> UserManager;
+
+<div class="text-center">
+    <h4 class="display-4">@Localizer["Activities"]</h4>
+</div>
+
+<br />
+
+@if (SignInManager.IsSignedIn(User) is true)
+{
+    <p>
+        @{
+            var claims = User.Claims;
+            var canCreateActivity = false;
+            try
+            {
+                var found = claims.First(c => c.Type == KGIdentity.ACTIVITY && c.Value == KGIdentity.CREATE);
+                canCreateActivity = true;
+            }
+            catch (Exception)
+            {
+                canCreateActivity = false;
+            }
+        }
+        @if (canCreateActivity)
+        {
+            @Localizer["Create new"]
+
+            <a asp-area="" asp-controller="Activities" asp-action="Create"> @Localizer["Activity"]</a>
+        }
+    </p>
+}
+
+<br />
+
+<div class="card-group">
+    @foreach (var activity in Model)
+    {
+        <div class="card" onclick="">
+            @{
+                var localUser = await UserManager.FindByIdAsync(@activity.UserId.ToString());
+            }
+            <img height="180px" width="286px" class="card-img-top" src="https://dash-bootstrap-components.opensource.faculty.ai/static/images/placeholder286x180.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">@activity.Title</h5>
+                <p class="card-text">@activity.Description</p>
+                <a asp-action="Detail" asp-route-id="@activity.Id">@Localizer["Read more.."]</a>
+                <!--
+                    <p class="card-text"><small class="text-muted">user.UserName</small></p>
+                -->
+            </div>
+        </div>
+    }
+</div>
+<br />
+<br />

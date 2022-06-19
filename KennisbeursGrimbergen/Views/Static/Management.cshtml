@@ -1,0 +1,79 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization;
+
+@inject IViewLocalizer Localizer;
+
+<div class="text-center">
+    <h4 class="display-4">@Localizer["Executive Committee"]</h4>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">@Localizer["Function"]</th>
+            <th scope="col">@Localizer["Information"]</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Localizer["Chair"]</td>
+            <td>
+                <p>
+                    Edwin Van Geert
+                </p>
+                <p>
+                    De Merodestraat    13
+                    1850    Grimbergen
+                </p>
+                <p>
+                    02 270 33 11
+                </p>
+                <p>
+                    <a href="mailto:vrzttr@kennisbeurs-grimbergen.be">@Localizer["Send mail"]</a>
+                </p>
+            </td>
+            <td><img src="http://www.kennisbeurs-grimbergen.be/Foto/FOTO_Edwin_VanGeert.jpg" /></td>
+        </tr>
+        <tr>
+            <td>@Localizer["Secretary"]</td>
+            <td>
+                <p>
+                    Christiane Van Nieuwenhuysen
+                </p>
+                <p>
+                    Poddegemstraat    12
+                    1850    Grimbergen
+                </p>
+                <p>
+                    02 270 97 61
+                </p>
+                <p>
+                    <a href="mailto:scrtrs@kennisbeurs-grimbergen.be">@Localizer["Send mail"]</a>
+                </p>
+            </td>
+            <td><img src="http://www.kennisbeurs-grimbergen.be/Foto/FOTO_Christiane_VanNieuwenhuysen.jpg" /></td>
+        </tr>
+        <tr>
+            <td>@Localizer["Treasurer"]</td>
+            <td>
+                <p>
+                    Claudine Somers
+                </p>
+                <p>
+                    Beigemsesteenweg    41
+                    1850    Grimbergen
+                </p>
+                <p>
+                    02 269 00 41
+                </p>
+                <p>
+                    <a href="mailto:pnnngmstr@kennisbeurs-grimbergen.be">@Localizer["Send mail"]</a>
+                </p>
+            </td>
+            <td><img src="http://www.kennisbeurs-grimbergen.be/Foto/FOTO_Claudine_Somers.jpg" /></td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<br />
+<br />

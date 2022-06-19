@@ -1,0 +1,33 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization;
+@using KennisbeursGrimbergen.Entities;
+@using KennisbeursGrimbergen.Identity;
+@using KennisbeursGrimbergen.Identity.Entities;
+@using Microsoft.AspNetCore.Identity;
+@using System.Linq;
+
+@model Activity
+
+@inject IViewLocalizer Localizer;
+@inject UserManager<User> UserManager;
+
+<div class="text-center">
+    <h4 class="display-4">@Model.Title</h4>
+</div>
+
+<form asp-controller="Activities" asp-action="Create">
+    <div style="display: flex; flex-direction: column">
+        <label>@Localizer["Description"]:</label>
+        <input type="text" asp-for="Description" readonly/>
+        <label>@Localizer["Animator"]:</label>
+        <input type="text" asp-for="Animator" readonly/>
+        <label>@Localizer["Email"]:</label>
+        <input type="text" asp-for="Email" readonly/>
+        <label>@Localizer["Date"]:</label>
+        <input type="text" asp-for="Date" readonly/>
+        <label>@Localizer["Location"]:</label>
+        <input type="text" asp-for="Location" readonly/>
+    </div>
+</form>
+
+<br />
+<br />
